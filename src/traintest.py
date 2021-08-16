@@ -11,6 +11,7 @@ import datetime
 sys.path.append(os.path.dirname(os.path.dirname(sys.path[0])))
 from utilities import *
 import time
+from tqdm import tqdm
 import torch
 from torch import nn
 import numpy as np
@@ -76,6 +77,12 @@ def train(audio_model, train_loader, test_loader, args):
         main_metrics = 'acc'
         loss_fn = nn.BCEWithLogitsLoss()
         warmup = False
+    elif args.dataset == 'dlr':
+        print('scheduler for dlr is used')
+        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(3,26)), gamma=0.85)
+        main_metrics = 'acc'
+        loss_fn = nn.CrossEntropyLoss()
+        warmup = False
     else:
         raise ValueError('unknown dataset, dataset should be in [audioset, speechcommands, esc50]')
     print('now training with {:s}, main metrics: {:s}, loss function: {:s}, learning rate scheduler: {:s}'.format(str(args.dataset), str(main_metrics), str(loss_fn), str(scheduler)))
@@ -97,7 +104,7 @@ def train(audio_model, train_loader, test_loader, args):
         print(datetime.datetime.now())
         print("current #epochs=%s, #steps=%s" % (epoch, global_step))
 
-        for i, (audio_input, labels) in enumerate(train_loader):
+        for i, (audio_input, labels) in tqdm(enumerate(train_loader)):
 
             B = audio_input.size(0)
             audio_input = audio_input.to(device, non_blocking=True)

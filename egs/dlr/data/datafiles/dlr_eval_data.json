@@ -1,0 +1,48 @@
+{
+ "data": [
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Nachbarschaftslaer/3_split_30610_Nachbarschaftslaer.wav",
+   "labels": "/m/21rwj01"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Nachbarschaftslaer/10_split_18248_Nachbarschaftslaer.wav",
+   "labels": "/m/21rwj01"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Flugzeug/7_split_23342_Flugzeug.wav",
+   "labels": "/m/21rwj03"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Probandengeraeusch/4_split_1926_Probandengeraeusch.wav",
+   "labels": "/m/21rwj02"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Probandengeraeusch/1_split_7294_Probandengeraeusch.wav",
+   "labels": "/m/21rwj02"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Autobahn/9_split_15156_Autobahn.wav",
+   "labels": "/m/21rwj00"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Flugzeug/2_split_15974_Flugzeug.wav",
+   "labels": "/m/21rwj03"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Autobahn/10_split_15469_Autobahn.wav",
+   "labels": "/m/21rwj00"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Nachbarschaftslaer/4_split_1569_Nachbarschaftslaer.wav",
+   "labels": "/m/21rwj01"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Flugzeug/9_split_31897_Flugzeug.wav",
+   "labels": "/m/21rwj03"
+  },
+  {
+   "wav": "../egs/dlr/data/dlrdata/audio16k/Autobahn/2_split_12005_Autobahn.wav",
+   "labels": "/m/21rwj00"
+  }
+ ]
+}
